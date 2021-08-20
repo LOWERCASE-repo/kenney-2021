@@ -6,8 +6,8 @@ class Ball : Synchro {
 	Vector3 spawnPos;
 	[SerializeField] Animator animator;
 	
-	AudioSource audio;
-	AudioClip[] bounceSounds;
+	[SerializeField] AudioSource source;
+	[SerializeField] AudioClip[] bounceSounds;
 	
 	void OnEnable() {
 		body = GetComponent<Rigidbody2D>();
@@ -25,7 +25,7 @@ class Ball : Synchro {
 	}
 	
 	void OnCollisionEnter2D() {
-		audio.PlayOneShot(bounceSounds[Random.Range(0, bounceSounds.Length)]);
+		source.PlayOneShot(bounceSounds[Random.Range(0, bounceSounds.Length)]);
 	}
 	
 	void EebyDeebyify() {

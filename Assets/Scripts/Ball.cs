@@ -16,5 +16,7 @@ class Ball : Synchro {
 		transform.localPosition = spawnPos;
 		body.isKinematic = true;
 		body.velocity = Vector2.zero;
+		body.angularVelocity = 0f;
+		transform.localRotation = Quaternion.identity;
 	}
 }

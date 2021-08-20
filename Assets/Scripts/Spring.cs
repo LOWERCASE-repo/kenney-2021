@@ -6,6 +6,9 @@ class Spring : MonoBehaviour {
 	SpriteRenderer sprite;
 	[SerializeField] float force;
 	
+	[SerializeField] AudioSource source;
+	[SerializeField] AudioClip[] sounds;
+	
 	void OnEnable() {
 		sprite = GetComponent<SpriteRenderer>();
 	}

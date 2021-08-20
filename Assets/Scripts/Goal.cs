@@ -6,6 +6,9 @@ class Goal : Synchro {
 	[SerializeField] Sprite open, filled;
 	[SerializeField] CircleCollider2D circle;
 	
+	[SerializeField] AudioSource source;
+	[SerializeField] AudioClip[] sounds;
+	
 	void OnEnable() {
 		Synchronizer.Self.RegisterGoal(this);
 	}
@@ -20,5 +23,6 @@ class Goal : Synchro {
 		collider.GetComponent<Animator>().SetTrigger("Goal");
 		circle.enabled = false;
 		Synchronizer.Self.CloseGoal(this);
+		source.PlayOneShot(sounds[Random.Range(0, sounds.Length)]);
 	}
 }

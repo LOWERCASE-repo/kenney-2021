@@ -6,6 +6,9 @@ class Key : Synchro {
 	[SerializeField] GameObject door;
 	[SerializeField] SpriteRenderer sprite;
 	
+	[SerializeField] AudioSource source;
+	[SerializeField] AudioClip[] sounds;
+	
 	void OnEnable() {
 		spawnPos = transform.localPosition;
 	}
@@ -19,5 +22,6 @@ class Key : Synchro {
 	void OnTriggerEnter2D() {
 		door.SetActive(false);
 		sprite.enabled = false;
+		source.PlayOneShot(sounds[Random.Range(0, sounds.Length)]);
 	}
 }

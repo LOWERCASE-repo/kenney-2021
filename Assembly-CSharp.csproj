@@ -58,13 +58,14 @@
     <Compile Include="Assets\Scripts\Pop.cs" />
     <Compile Include="Assets\Scripts\Spring.cs" />
     <Compile Include="Assets\Scripts\Ball.cs" />
+    <Compile Include="Assets\Scripts\Key.cs" />
     <Compile Include="Assets\Scripts\Draggable.cs" />
     <Compile Include="Assets\Scripts\Generator.cs" />
     <Compile Include="Assets\Scripts\FastForward.cs" />
     <Compile Include="Assets\Scripts\Synchro.cs" />
     <Compile Include="Assets\Scripts\Spikes.cs" />
     <Compile Include="Assets\Scripts\Rotator.cs" />
-    <Compile Include="Assets\Scripts\Key.cs" />
+    <Compile Include="Assets\MouseInput.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Sprites\gameicons\Spritesheet\sheet_white1x.xml" />

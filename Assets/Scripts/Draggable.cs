@@ -36,7 +36,7 @@ public class Draggable : MonoBehaviour
 	
 	void PutDown() {
 		
-		gameObject.layer = 0;
+		gameObject.layer = 7;
 		print("put down");
 		isHeld = false;
 	}

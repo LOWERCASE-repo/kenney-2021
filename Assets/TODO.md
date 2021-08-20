@@ -1,5 +1,2 @@
 - fall damage screenshake
-- spikes
-- springs
 - ball into hole anim
-- object pooling

@@ -3,6 +3,7 @@ using UnityEngine;
 class Synchronizer : MonoBehaviour {
 	
 	internal static Synchronizer Self;
+	[SerializeField] internal Grid grid;
 	
 	void OnAwake() => Self = this;
 	

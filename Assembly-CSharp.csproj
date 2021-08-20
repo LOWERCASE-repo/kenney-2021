@@ -65,7 +65,6 @@
     <Compile Include="Assets\Scripts\Synchro.cs" />
     <Compile Include="Assets\Scripts\Spikes.cs" />
     <Compile Include="Assets\Scripts\Rotator.cs" />
-    <Compile Include="Assets\MouseInput.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Sprites\gameicons\Spritesheet\sheet_white1x.xml" />

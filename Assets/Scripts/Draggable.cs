@@ -32,6 +32,11 @@ public class Draggable : MonoBehaviour
 			mousePos.z = 0f;
 			poll = grid.WorldToCell(mousePos);
 			transform.position = grid.GetCellCenterLocal(poll);
+			if (Input.GetKeyDown("left") || Input.GetKeyDown("a") || Input.GetKeyDown("q")) {
+				transform.Rotate(new Vector3(0, 0, 90));
+            } else if (Input.GetKeyDown("right") || Input.GetKeyDown("e") || Input.GetKeyDown("d")) {
+				transform.Rotate(new Vector3(0, 0, -90));
+			}
 		}
 	}
 	

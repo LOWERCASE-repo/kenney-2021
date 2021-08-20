@@ -13,14 +13,15 @@ class Generator : MonoBehaviour
 	public Button button;
 	[SerializeField]
 	TMP_Text text;
-	
+	public bool interactable;
+
 	[Header("Touch me")] 
 	[SerializeField]
 	GameObject prefab;
 	[SerializeField]
 	int tileNum;
 
-	public bool interactable;
+
 	
 	private int tileNumHide;
 	internal void IncrementTNH() {

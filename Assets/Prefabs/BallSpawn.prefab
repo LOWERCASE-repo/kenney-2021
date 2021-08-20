@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8371415061367386874}
   - component: {fileID: 8049036316515466695}
-  - component: {fileID: 4503458563859760268}
   - component: {fileID: -4604351898249300292}
   m_Layer: 0
   m_Name: BallSpawn
@@ -85,20 +84,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &4503458563859760268
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4475220106119462469}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c6fe7a74b17bfa048a0779037faaafdd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isHeld: 0
-  grid: {fileID: 0}
 --- !u!58 &-4604351898249300292
 CircleCollider2D:
   m_ObjectHideFlags: 0

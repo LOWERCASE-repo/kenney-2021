@@ -6,6 +6,7 @@ class Synchronizer : MonoBehaviour {
 	internal static Synchronizer Self;
 	[SerializeField] internal Grid grid;
 	[SerializeField] internal Transform playerPieces;
+	[SerializeField] Transform Buttons;
 	List<Goal> goals = new List<Goal>();
 	
 	void Awake() => Self = this;
@@ -33,5 +34,21 @@ class Synchronizer : MonoBehaviour {
 	internal void CloseGoal(Goal goal) {
 		goals.Remove(goal);
 		if (goals.Count == 0) print("B U N G U S");
+	}
+
+    public void play() {
+		OnEnable();
+		foreach (Generator g in Buttons.GetComponentsInChildren<Generator>()) {
+			g.button.interactable = false;
+			g.interactable = false;
+		}
+	}
+
+	public void restart() {
+		OnDisable();
+		foreach (Generator g in Buttons.GetComponentsInChildren<Generator>()) {
+			g.button.interactable = true;
+			g.interactable = true;
+		}
 	}
 }

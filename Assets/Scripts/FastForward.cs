@@ -24,7 +24,6 @@ class FastForward : MonoBehaviour {
 	}
 
 	public void ButtonToggle () {
-		isFast = !isFast;
 		if (isFast) {
 			OnDisable();
 			button.sprite = fast;
@@ -32,5 +31,6 @@ class FastForward : MonoBehaviour {
 			OnEnable();
 			button.sprite = slow;
         }
-    }
+		isFast = !isFast;
+	}
 }

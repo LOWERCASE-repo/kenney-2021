@@ -4,13 +4,13 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-class Generator : Synchro
+class Generator : MonoBehaviour
 {
 	Transform parent;
 	[SerializeField]
 	Image image;
 	[SerializeField]
-	Button button;
+	public Button button;
 	[SerializeField]
 	TMP_Text text;
 	
@@ -19,11 +19,17 @@ class Generator : Synchro
 	GameObject prefab;
 	[SerializeField]
 	int tileNum;
+
+	public bool interactable;
 	
 	private int tileNumHide;
 	internal void IncrementTNH() {
 		tileNumHide++;
 		text.text = tileNumHide.ToString();
+		if (tileNumHide > 0) {
+			button.interactable = true;
+			interactable = true;
+		}
 	}
 	
 	private void Start() {
@@ -36,16 +42,13 @@ class Generator : Synchro
 		tileNumHide = tileNum;
 		if (tileNumHide > 0) {
 			button.interactable = true;
+			interactable = true;
 		}
 		text.text = tileNumHide.ToString();
 	}
 	
-	private void OnDisable() {
-		tileNumHide = tileNum;
-	}
-	
 	public void Generate () {
-		if (tileNumHide > 0) {
+		if (interactable) {
 			Vector3 mousePos = new Vector3(Camera.main.ScreenToWorldPoint(Input.mousePosition).x, Camera.main.ScreenToWorldPoint(Input.mousePosition).y, 0f);
 			GameObject g = Instantiate(prefab, mousePos, Quaternion.identity, parent);
 			Draggable drag = g.AddComponent<Draggable>();
@@ -56,6 +59,7 @@ class Generator : Synchro
 			text.text = tileNumHide.ToString();
 			if (tileNumHide == 0) {
 				button.interactable = false;
+				interactable = false;
 			}
 		}
 	}

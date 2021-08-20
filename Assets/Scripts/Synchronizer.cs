@@ -2,10 +2,10 @@ using UnityEngine;
 
 class Synchronizer : MonoBehaviour {
 	
-	// GameObject 
+	
 	
 	void OnEnable() {
-		
+		GameObject[] synchros = FindGameObjectsWithTag("Synchro");
 	}
 	
 	void OnDisable() {

@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 class FastForward : MonoBehaviour {
 
-	bool isFast;
+	internal bool isFast;
 	float baseSpeed;
 	[SerializeField] float multiplier;
 	[SerializeField] Sprite fast;

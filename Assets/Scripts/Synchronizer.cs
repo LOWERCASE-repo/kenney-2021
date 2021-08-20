@@ -7,6 +7,7 @@ class Synchronizer : MonoBehaviour {
 	[SerializeField] internal Grid grid;
 	[SerializeField] internal Transform playerPieces;
 	[SerializeField] Transform Buttons;
+	[SerializeField] Animator fader;
 	List<Goal> goals = new List<Goal>();
 	
 	void Awake() => Self = this;
@@ -33,7 +34,7 @@ class Synchronizer : MonoBehaviour {
 	
 	internal void CloseGoal(Goal goal) {
 		goals.Remove(goal);
-		if (goals.Count == 0) print("B U N G U S");
+		if (goals.Count == 0) fader.SetTrigger("Complete");
 	}
 
     public void play() {

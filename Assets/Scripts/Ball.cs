@@ -25,7 +25,7 @@ class Ball : Synchro {
 	}
 	
 	void OnCollisionEnter2D() {
-		source.PlayOneShot(bounceSounds[Random.Range(0, bounceSounds.Length)]);
+		if (body.velocity.sqrMagnitude > 6f) source.PlayOneShot(bounceSounds[Random.Range(0, bounceSounds.Length)]);
 	}
 	
 	void EebyDeebyify() {

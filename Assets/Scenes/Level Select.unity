@@ -1005,7 +1005,7 @@ GameObject:
   - component: {fileID: 1558214514}
   - component: {fileID: 1558214513}
   m_Layer: 5
-  m_Name: FadeIn
+  m_Name: Fader
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1357,8 +1357,9 @@ MonoBehaviour:
   levelGridLayout: {fileID: 1018283972}
   prevButton: {fileID: 520467013}
   nextButton: {fileID: 1413034527}
-  levelPrefab: {fileID: 7495207652401411434, guid: 0786d02569a56804bb351b95f5b08069, type: 3}
+  levelButton: {fileID: 1058229375214417633, guid: 0786d02569a56804bb351b95f5b08069, type: 3}
   titleText: {fileID: 338547288}
+  fader: {fileID: 1558214513}
   levelIndexStart: 0
   levelIndexEnd: 2
   pageNumber: 0

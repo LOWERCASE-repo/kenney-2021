@@ -2,7 +2,6 @@ using UnityEngine;
 
 class Ball : Synchro {
 	
-	// [SerializeField] float speed;
 	Rigidbody2D body;
 	Vector3 spawnPos;
 	[SerializeField] Animator animator;
@@ -22,7 +21,7 @@ class Ball : Synchro {
 		animator.SetTrigger("Reset");
 	}
 	
-	// internal void Goal() {
-	// 	animator.SetTrigger("Goal");
-	// }
+	void EebyDeebyify() {
+		transform.position += Vector3.down * 100f;
+	}
 }

@@ -12,6 +12,6 @@ class Goal : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D collider) {
 		sprite.sprite = filled;
 		collider.GetComponent<Animator>().SetTrigger("Goal");
+		
 	}
-	
 }

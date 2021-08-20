@@ -5,6 +5,7 @@ class Synchronizer : MonoBehaviour {
 	
 	internal static Synchronizer Self;
 	[SerializeField] internal Grid grid;
+	[SerializeField] internal Transform playerPieces;
 	List<Goal> goals = new List<Goal>();
 	
 	void Awake() => Self = this;
@@ -12,6 +13,7 @@ class Synchronizer : MonoBehaviour {
 	void OnEnable() {
 		GameObject[] synchros = GameObject.FindGameObjectsWithTag("Synchro");
 		foreach (GameObject gameObject in synchros) {
+			gameObject.
 			gameObject.GetComponent<Synchro>().enabled = true;
 		}
 	}

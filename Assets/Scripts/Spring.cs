@@ -11,12 +11,16 @@ class Spring : MonoBehaviour {
 	}
 	
 	void OnTriggerEnter2D(Collider2D collider) {
-		// collider.GetComponent<Rigidbody2D>().velocity = transform.up * force;
-		collider.GetComponent<Rigidbody2D>().AddForce(transform.up * force, ForceMode2D.Impulse);
-		sprite.sprite = spring;
+		if (gameObject.layer != 6) {
+			// collider.GetComponent<Rigidbody2D>().velocity = transform.up * force;
+			collider.GetComponent<Rigidbody2D>().AddForce(transform.up * force, ForceMode2D.Impulse);
+			sprite.sprite = spring;
+		}
 	}
 	
 	void OnTriggerExit2D(Collider2D collider) {
-		sprite.sprite = sprung;
+		if (gameObject.layer != 6) {
+			sprite.sprite = sprung;
+		}
 	}
 }

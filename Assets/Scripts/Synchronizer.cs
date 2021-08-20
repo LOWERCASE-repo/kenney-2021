@@ -13,6 +13,7 @@ class Synchronizer : MonoBehaviour {
 	void OnEnable() {
 		GameObject[] synchros = GameObject.FindGameObjectsWithTag("Synchro");
 		foreach (GameObject gameObject in synchros) {
+			gameObject.
 			gameObject.GetComponent<Synchro>().enabled = true;
 		}
 	}

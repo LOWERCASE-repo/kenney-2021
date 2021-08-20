@@ -213,10 +213,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 224490e9fa1c3ee4ca45b780ee61bed2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  image: {fileID: 3272179129926551503}
+  button: {fileID: 6771990698650520376}
+  text: {fileID: 1411808866047410493}
   prefab: {fileID: 5858215599395437849, guid: 2f881afda9fdadc4d927bd4414ee914e, type: 3}
   tileNum: 0
-  parent: {fileID: 0}
-  image: {fileID: 3272179129926551503}
 --- !u!114 &6771990698650520379
 MonoBehaviour:
   m_ObjectHideFlags: 0

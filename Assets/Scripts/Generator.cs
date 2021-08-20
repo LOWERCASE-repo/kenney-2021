@@ -21,6 +21,10 @@ class Generator : Synchro
 	int tileNum;
 	
 	private int tileNumHide;
+	internal void IncrementTNH() {
+		tileNumHide++;
+		text.text = tileNumHide.ToString();
+	}
 	
 	private void Start() {
 		tileNumHide = tileNum;
@@ -45,6 +49,7 @@ class Generator : Synchro
 			Vector3 mousePos = new Vector3(Camera.main.ScreenToWorldPoint(Input.mousePosition).x, Camera.main.ScreenToWorldPoint(Input.mousePosition).y, 0f);
 			GameObject g = Instantiate(prefab, mousePos, Quaternion.identity, parent);
 			Draggable drag = g.AddComponent<Draggable>();
+			drag.generator = this;
 			drag.PickUp();
 			
 			tileNumHide--;

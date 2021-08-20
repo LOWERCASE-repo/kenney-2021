@@ -364,7 +364,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 8a5fa3ce3d2870341ac47ac8e83b5034, type: 3}
+  m_Sprite: {fileID: 21300000, guid: bb69908927b3b9444a44ddc15a9a811e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3983,7 +3983,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 0eae73a598d7dda44997917b053d1db4, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 138f97b9e7fed5f4ab8696c8424c8f94, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4124,7 +4124,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 2a2592b182ee7794f8ef4c3a464a545c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: df9e271a55ad92a49a402acd60f39940, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -5513,6 +5513,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   multiplier: 3
+  fast: {fileID: 21300000, guid: 138f97b9e7fed5f4ab8696c8424c8f94, type: 3}
+  slow: {fileID: 21300000, guid: b57c2042df595294ca7ba8306cfdcea0, type: 3}
+  button: {fileID: 1170700496}
 --- !u!1001 &7734334563019776838
 PrefabInstance:
   m_ObjectHideFlags: 0

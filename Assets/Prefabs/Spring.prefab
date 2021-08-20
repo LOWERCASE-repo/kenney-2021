@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 5858215599395437850}
   - component: {fileID: 5858215599395437851}
   - component: {fileID: 5858215599395438053}
-  - component: {fileID: -8309596199389214740}
   - component: {fileID: 4510931467397818978}
   m_Layer: 0
   m_Name: Spring
@@ -96,7 +95,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: -0.125}
@@ -134,32 +133,6 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 25a3fea3e4dd48d498ef93c8067c1587, type: 3}
   - {fileID: 8300000, guid: 7f5ec1bde4200094a8a0b95737155cf4, type: 3}
   - {fileID: 8300000, guid: 2cfa9fa839cbc8f4d9326bf6f964b7d9, type: 3}
---- !u!61 &-8309596199389214740
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5858215599395437849}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
 --- !u!82 &4510931467397818978
 AudioSource:
   m_ObjectHideFlags: 0

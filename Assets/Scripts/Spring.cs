@@ -18,6 +18,7 @@ class Spring : MonoBehaviour {
 			// collider.GetComponent<Rigidbody2D>().velocity = transform.up * force;
 			collider.GetComponent<Rigidbody2D>().AddForce(transform.up * force, ForceMode2D.Impulse);
 			sprite.sprite = spring;
+			source.PlayOneShot(sounds[Random.Range(0, sounds.Length)]);
 		}
 	}
 	

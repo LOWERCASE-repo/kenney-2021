@@ -26,10 +26,10 @@ class Synchronizer : MonoBehaviour {
 	
 	internal void RegisterGoal(Goal goal) {
 		goals.Add(goal);
-		print("goal registered " + goals.Count);
 	}
 	
 	internal void CloseGoal(Goal goal) {
 		goals.Remove(goal);
+		if (goals.Count == 0) print("B U N G U S");
 	}
 }

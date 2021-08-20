@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 class Finish : MonoBehaviour {
 	
@@ -15,7 +16,9 @@ class Finish : MonoBehaviour {
 	}
 	
 	void TransitionLevelSelect() {
-		print("if level select existed, i'd redirect ya now");
+		SceneManager.LoadScene(0);
+		// print("if level select existed, i'd redirect ya now");
+		
 	}
 	
 }

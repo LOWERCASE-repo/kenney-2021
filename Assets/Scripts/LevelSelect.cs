@@ -9,14 +9,12 @@ public class LevelSelect : MonoBehaviour
 {
 
     [Header("Set these in editor")]
-    public int COLS, ROWS;
-    public Transform levelGridLayout;
-    public Button prevButton;
-    public Button nextButton;
-    public GameObject levelPrefab;
-    public GameObject gridFillerPrefab;
-    public TextMeshProUGUI titleText;
-    public Camera cam;
+    [SerializeField] int COLS, ROWS;
+    [SerializeField] Transform levelGridLayout;
+    [SerializeField] Button prevButton;
+    [SerializeField] Button nextButton;
+    [SerializeField] GameObject levelPrefab;
+    [SerializeField] TextMeshProUGUI titleText;
 
     //public List<Scene> levels;
     public int levelIndexStart, levelIndexEnd;
@@ -28,25 +26,12 @@ public class LevelSelect : MonoBehaviour
     public int levelCount;
 
     // Start is called before the first frame update
-    void Start()
-    {
-        Color[] colours = { new Color(224 / 255f, 166 / 255f, 175 / 255f), new Color(92 / 255f, 188 / 255f, 205 / 255f), 
-                            new Color (138/255f, 198/255f, 132/255f), new Color (219/255f, 199/255f, 156/255f)};
-        LoadLevels();
-        cam.backgroundColor = colours[(int)(Random.value * 4)];
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    void LoadLevels() {
-        //Get levels
+    void Start() {
         levelNames = new List<string>();
+        //Get levels
         for (int i = 1; i < SceneManager.sceneCountInBuildSettings; i++) {
             string currentScene = SceneUtility.GetScenePathByBuildIndex(i);
+            print(currentScene);
             currentScene = currentScene.Substring(currentScene.LastIndexOf("/") + 1, currentScene.LastIndexOf(".") - currentScene.LastIndexOf("/") - 1);
             if (!currentScene.Equals("Level Select") && !currentScene.Equals("Main Menu")) {
                 levelNames.Add(currentScene);
@@ -54,6 +39,10 @@ public class LevelSelect : MonoBehaviour
         }
         levelCount = levelNames.Count;
 
+        LoadLevels();
+    }
+
+    void LoadLevels() {
         int startIndex = pageNumber * (COLS * ROWS);
         foreach (Transform child in levelGridLayout) {
             Destroy(child.gameObject);
@@ -68,8 +57,6 @@ public class LevelSelect : MonoBehaviour
                 } else {
                     go.GetComponent<LevelSelectButton>().levelName = "You didn't set enough level names. No seriously, you have to fix this.";
                 }
-            } else {
-                Instantiate(gridFillerPrefab, levelGridLayout);
             }
         }
 

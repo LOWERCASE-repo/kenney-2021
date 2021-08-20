@@ -840,7 +840,7 @@ MonoBehaviour:
     m_Right: 0
     m_Top: 0
     m_Bottom: 0
-  m_ChildAlignment: 4
+  m_ChildAlignment: 0
   m_StartCorner: 0
   m_StartAxis: 0
   m_CellSize: {x: 80, y: 80}
@@ -1094,7 +1094,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0.21960786, g: 0.21960786, b: 0.21960786, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -1262,9 +1262,7 @@ MonoBehaviour:
   prevButton: {fileID: 520467013}
   nextButton: {fileID: 1413034527}
   levelPrefab: {fileID: 7495207652401411434, guid: 0786d02569a56804bb351b95f5b08069, type: 3}
-  gridFillerPrefab: {fileID: 9032032396156098464, guid: 4b3d9e2a5a059184394640c388664bcf, type: 3}
   titleText: {fileID: 338547288}
-  cam: {fileID: 1884873258}
   levelIndexStart: 0
   levelIndexEnd: 2
   pageNumber: 0

@@ -4,16 +4,16 @@ class Ball : Synchro {
 	
 	// [SerializeField] float speed;
 	Rigidbody2D body;
-	Vector2 spawnPos;
+	Vector3 spawnPos;
 	
 	void OnEnable() {
 		body = GetComponent<Rigidbody2D>();
-		spawnPos = body.position;
+		spawnPos = transform.localPosition;
 		body.isKinematic = false;
 	}
 	
 	void OnDisable() {
-		body.position = spawnPos;
+		transform.localPosition = spawnPos;
 		body.isKinematic = true;
 		body.velocity = Vector2.zero;
 	}

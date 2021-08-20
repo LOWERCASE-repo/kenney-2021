@@ -5,7 +5,7 @@ class Synchronizer : MonoBehaviour {
 	internal static Synchronizer Self;
 	[SerializeField] internal Grid grid;
 	
-	void OnAwake() => Self = this;
+	void Awake() => Self = this;
 	
 	void OnEnable() {
 		GameObject[] synchros = GameObject.FindGameObjectsWithTag("Synchro");

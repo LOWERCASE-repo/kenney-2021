@@ -24,7 +24,7 @@ public class Draggable : MonoBehaviour
 		cam = Camera.main;
 		sprite = GetComponent<SpriteRenderer>();
 		grid = Synchronizer.Self.grid;
-		placements = grid.transform.GetChild(1).GetComponent<Tilemap>();
+		placements = grid.transform.GetChild(0).GetComponent<Tilemap>();
 		if (gameObject.tag.Equals("Spring")) {
 			angle = 45;
         } else {

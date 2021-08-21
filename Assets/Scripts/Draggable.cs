@@ -33,9 +33,9 @@ public class Draggable : MonoBehaviour
 			poll = grid.WorldToCell(mousePos);
 			transform.position = grid.GetCellCenterLocal(poll);
 			if (Input.GetKeyDown("left") || Input.GetKeyDown("a") || Input.GetKeyDown("q")) {
-				transform.Rotate(new Vector3(0, 0, 90));
+				transform.Rotate(new Vector3(0, 0, 45));
             } else if (Input.GetKeyDown("right") || Input.GetKeyDown("e") || Input.GetKeyDown("d")) {
-				transform.Rotate(new Vector3(0, 0, -90));
+				transform.Rotate(new Vector3(0, 0, -45));
 			}
 			if (Input.GetMouseButtonUp(0)) {
 				sprite.sortingLayerName = "Default";

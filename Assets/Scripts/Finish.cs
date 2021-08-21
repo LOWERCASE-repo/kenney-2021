@@ -15,7 +15,7 @@ class Finish : MonoBehaviour {
 		source.PlayOneShot(clips[Random.Range(0, clips.Length)]);
 	}
 	
-	void TransitionLevelSelect() {
+	public void TransitionLevelSelect() {
 		SceneManager.LoadScene(0);
 		// print("if level select existed, i'd redirect ya now");
 		

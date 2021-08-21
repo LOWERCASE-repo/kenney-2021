@@ -7,7 +7,7 @@ class StartMenu : MonoBehaviour {
 	[SerializeField] Animator animator;
 	
 	public void TriggerFade() {
-		animator.SetTrigger("Complete");
+		animator.SetTrigger("FadeOut");
 		StartCoroutine(SwitchScene());
 	}
 	

@@ -23,7 +23,7 @@ class Generator : MonoBehaviour
 
 
 	
-	private int tileNumHide;
+	public int tileNumHide;
 	internal void IncrementTNH() {
 		tileNumHide++;
 		text.text = tileNumHide.ToString();

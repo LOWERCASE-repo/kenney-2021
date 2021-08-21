@@ -2,7 +2,7 @@ using UnityEngine;
 
 class Rotator : Synchro {
 	
-	[SerializeField] float speed;
+	[SerializeField] internal float speed;
 	Rigidbody2D body;
 	
 	bool rotating;

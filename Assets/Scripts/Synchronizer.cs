@@ -4,6 +4,7 @@ using System.Collections.Generic;
 class Synchronizer : MonoBehaviour {
 	
 	internal static Synchronizer Self;
+	[SerializeField] internal bool isPlay;
 	[SerializeField] internal Grid grid;
 	[SerializeField] internal Transform playerPieces;
 	[SerializeField] Transform Buttons;
@@ -13,6 +14,7 @@ class Synchronizer : MonoBehaviour {
 	void Awake() => Self = this;
 	
 	void OnEnable() {
+		isPlay = true;
 		GameObject[] synchros = GameObject.FindGameObjectsWithTag("Synchro");
 		foreach (GameObject gameObject in synchros) {
 			gameObject.
@@ -21,6 +23,7 @@ class Synchronizer : MonoBehaviour {
 	}
 	
 	void OnDisable() {
+		isPlay = false;
 		GameObject[] synchros = GameObject.FindGameObjectsWithTag("Synchro");
 		foreach (GameObject gameObject in synchros) {
 			gameObject.GetComponent<Synchro>().enabled = false;

@@ -37,6 +37,14 @@ public class Draggable : MonoBehaviour
             } else if (Input.GetKeyDown("right") || Input.GetKeyDown("e") || Input.GetKeyDown("d")) {
 				transform.Rotate(new Vector3(0, 0, -90));
 			}
+			if (Input.GetMouseButtonUp(0)) {
+				sprite.sortingLayerName = "Default";
+				if (placements.GetTile(poll) != null) PutDown();
+				else {
+					Destroy(gameObject);
+					generator.IncrementTNH();
+				}
+			}
 		}
 	}
 	
@@ -44,17 +52,18 @@ public class Draggable : MonoBehaviour
 		sprite.sortingLayerName = "Placements";
 		PickUp();
 	}
-	
-	private void OnMouseUp() {
-		sprite.sortingLayerName = "Default";
-		if (placements.GetTile(poll) != null) PutDown();
-		else {
-			Destroy(gameObject);
-			generator.IncrementTNH();
+
+    private void OnMouseOver() {
+		if (!Synchronizer.Self.isPlay) {
+			sprite.color = new Color(sprite.color.r, sprite.color.g, sprite.color.b, 150f / 255);
 		}
+    }
+
+    private void OnMouseExit() {
+		sprite.color = new Color(sprite.color.r, sprite.color.g, sprite.color.b, 1f);
 	}
-	
-	public void PickUp() {
+
+    public void PickUp() {
 		gameObject.layer = 6;
 		print("picked up");
 		isHeld = true;

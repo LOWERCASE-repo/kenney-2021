@@ -49,7 +49,7 @@ class Generator : MonoBehaviour
 	}
 	
 	public void Generate () {
-		if (interactable) {
+		if (interactable && !Synchronizer.Self.isPlay) {
 			Vector3 mousePos = new Vector3(Camera.main.ScreenToWorldPoint(Input.mousePosition).x, Camera.main.ScreenToWorldPoint(Input.mousePosition).y, 0f);
 			GameObject g = Instantiate(prefab, mousePos, Quaternion.identity, parent);
 			Draggable drag = g.AddComponent<Draggable>();

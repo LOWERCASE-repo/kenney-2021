@@ -3,16 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
-public class Draggable : MonoBehaviour
-{
-	[SerializeField]
-	bool isHeld;
-	[SerializeField]
-	Grid grid;
-	[SerializeField]
-	Tilemap placements;
-	[SerializeField]
-	SpriteRenderer sprite;
+class Draggable : MonoBehaviour {
+	[SerializeField] bool isHeld;
+	[SerializeField] Grid grid;
+	[SerializeField] Tilemap placements;
+	[SerializeField] SpriteRenderer sprite;
 	float angle;
 	
 	Camera cam;
@@ -25,11 +20,7 @@ public class Draggable : MonoBehaviour
 		sprite = GetComponent<SpriteRenderer>();
 		grid = Synchronizer.Self.grid;
 		placements = grid.transform.GetChild(0).GetComponent<Tilemap>();
-		if (gameObject.tag.Equals("Spring")) {
-			angle = 45;
-        } else {
-			angle = 90;
-        }
+		angle = gameObject.tag.Equals("Spring") ? 45f : 90f;
 	}
 	
 	private void Update() {
@@ -40,54 +31,60 @@ public class Draggable : MonoBehaviour
 			transform.position = grid.GetCellCenterLocal(poll);
 			if (Input.GetKeyDown("left") || Input.GetKeyDown("a") || Input.GetKeyDown("q")) {
 				transform.Rotate(new Vector3(0, 0, angle));
-            } else if (Input.GetKeyDown("right") || Input.GetKeyDown("e") || Input.GetKeyDown("d")) {
-				transform.Rotate(new Vector3(0, 0, -angle));
-			}
-			if (Input.GetMouseButtonUp(0)) {
-				sprite.sortingLayerName = "Default";
-				if (placements.GetTile(poll) != null) PutDown();
-				else {
-					Destroy(gameObject);
-					generator.IncrementTNH();
+				} else if (Input.GetKeyDown("right") || Input.GetKeyDown("e") || Input.GetKeyDown("d")) {
+					transform.Rotate(new Vector3(0, 0, -angle));
+				}
+				if (Input.GetMouseButtonUp(0)) {
+					sprite.sortingLayerName = "Default";
+					if (placements.GetTile(poll) != null && !Synchronizer.Self.currentPieces.Contains(poll)) {
+						PutDown();
+						Synchronizer.Self.currentPieces.Add(poll);
+					} else {
+						Destroy(gameObject);
+						generator.IncrementTNH();
+					}
 				}
 			}
 		}
-	}
-	
-	private void OnMouseDown() {
-		if (!Synchronizer.Self.isPlay) {
-			sprite.sortingLayerName = "Placements";
-			PickUp();
-		}
-	}
-
-    private void OnMouseOver() {
-		if (!Synchronizer.Self.isPlay) {
-			sprite.color = new Color(sprite.color.r, sprite.color.g, sprite.color.b, 150f / 255);
-		}
-    }
-
-    private void OnMouseExit() {
-		sprite.color = new Color(sprite.color.r, sprite.color.g, sprite.color.b, 1f);
-	}
-
-    public void PickUp() {
-		gameObject.layer = 6;
-		foreach(Transform t in gameObject.transform) {
-			t.gameObject.layer = 6;
-        }
-		print("picked up");
-		isHeld = true;
-	}
-	
-	void PutDown() {
 		
-		gameObject.layer = 0;
-		foreach (Transform t in gameObject.transform) {
-			t.gameObject.layer = 2;
+		private void OnMouseDown() {
+			if (!Synchronizer.Self.isPlay) {
+				sprite.sortingLayerName = "Placements";
+				Vector3 mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
+				mousePos.z = 0f;
+				Vector3Int poll = grid.WorldToCell(mousePos);
+				Synchronizer.Self.currentPieces.Remove(poll);
+				PickUp();
+			}
 		}
-		print("put down");
-		isHeld = false;
+		
+		private void OnMouseOver() {
+			if (!Synchronizer.Self.isPlay) {
+				sprite.color = new Color(sprite.color.r, sprite.color.g, sprite.color.b, 150f / 255);
+			}
+		}
+		
+		private void OnMouseExit() {
+			sprite.color = new Color(sprite.color.r, sprite.color.g, sprite.color.b, 1f);
+		}
+		
+		public void PickUp() {
+			gameObject.layer = 6;
+			foreach(Transform t in gameObject.transform) {
+				t.gameObject.layer = 6;
+			}
+			print("picked up");
+			isHeld = true;
+		}
+		
+		void PutDown() {
+			
+			gameObject.layer = 0;
+			foreach (Transform t in gameObject.transform) {
+				t.gameObject.layer = 2;
+			}
+			print("put down");
+			isHeld = false;
+		}
+		
 	}
-	
-}

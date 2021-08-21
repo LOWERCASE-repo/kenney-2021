@@ -18,6 +18,10 @@ class Finish : MonoBehaviour {
 	public void TransitionLevelSelect() {
 		SceneManager.LoadScene(1);
 	}
+	
+	public void Restart() {
+		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+	}
 
 	void TransitionNextLevel() {
 		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);

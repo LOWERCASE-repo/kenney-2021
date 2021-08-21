@@ -2298,9 +2298,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3653511190728637311}
-        m_TargetAssemblyTypeName: Synchronizer, Assembly-CSharp
-        m_MethodName: restart
+      - m_Target: {fileID: 3653511191999658483}
+        m_TargetAssemblyTypeName: Finish, Assembly-CSharp
+        m_MethodName: Restart
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

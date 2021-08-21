@@ -38,7 +38,12 @@ class Generator : MonoBehaviour
 		parent = Synchronizer.Self.playerPieces;
 	}
 	private void OnEnable() {
-		Sprite s = prefab.GetComponent<SpriteRenderer>().sprite;
+		Sprite s;
+		if (prefab.transform.childCount > 0) {
+			s = prefab.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite;
+		} else {
+			s = prefab.GetComponent<SpriteRenderer>().sprite;
+		}
 		image.sprite = s;
 		tileNumHide = tileNum;
 		if (tileNumHide > 0) {

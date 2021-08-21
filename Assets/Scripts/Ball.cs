@@ -29,6 +29,6 @@ class Ball : Synchro {
 	}
 	
 	void EebyDeebyify() {
-		transform.position += Vector3.down * 1085072238237f;
+		transform.position += Vector3.down * 868031011794f;
 	}
 }

@@ -13,6 +13,6 @@ class StartMenu : MonoBehaviour {
 	
 	IEnumerator SwitchScene() {
 		yield return new WaitForSeconds(0.25f);
-		SceneManager.LoadScene(0);
+		SceneManager.LoadScene(1);
 	}
 }

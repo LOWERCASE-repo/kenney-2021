@@ -16,7 +16,7 @@ class Finish : MonoBehaviour {
 	}
 	
 	public void TransitionLevelSelect() {
-		SceneManager.LoadScene(0);
+		SceneManager.LoadScene(1);
 		// print("if level select existed, i'd redirect ya now");
 		
 	}

@@ -73,6 +73,7 @@
     <Compile Include="Assets\Scripts\Rotator.cs" />
     <Compile Include="Assets\Scripts\StartMenu.cs" />
     <Compile Include="Assets\Scripts\Platform.cs" />
+    <Compile Include="Assets\Scripts\LevelName.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Sprites\gameicons\Spritesheet\sheet_white1x.xml" />

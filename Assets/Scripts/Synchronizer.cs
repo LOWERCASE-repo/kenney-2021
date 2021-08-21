@@ -51,6 +51,7 @@ class Synchronizer : MonoBehaviour {
 	public void restart() {
 		OnDisable();
 		foreach (Generator g in Buttons.GetComponentsInChildren<Generator>()) {
+			if (g.tileNumHide > 0)
 			g.button.interactable = true;
 			g.interactable = true;
 		}

@@ -54,6 +54,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Levels/Abandonment.unity
     guid: ce4af1d822e4dcd4bb37bd1e99633c04
   - enabled: 1
+    path: Assets/Scenes/Levels/Bouncy Castle.unity
+    guid: b2a366daeefd55a45972cee4c7420739
+  - enabled: 1
     path: Assets/Scenes/Levels/Stalling.unity
     guid: b80ab3b1b1979bd409bbcf56973fc970
   - enabled: 1

@@ -13,6 +13,7 @@ public class Draggable : MonoBehaviour
 	Tilemap placements;
 	[SerializeField]
 	SpriteRenderer sprite;
+	float angle;
 	
 	Camera cam;
 	Vector3Int poll;
@@ -24,6 +25,11 @@ public class Draggable : MonoBehaviour
 		sprite = GetComponent<SpriteRenderer>();
 		grid = Synchronizer.Self.grid;
 		placements = grid.transform.GetChild(1).GetComponent<Tilemap>();
+		if (gameObject.tag.Equals("Spring")) {
+			angle = 45;
+        } else {
+			angle = 90;
+        }
 	}
 	
 	private void Update() {
@@ -33,9 +39,9 @@ public class Draggable : MonoBehaviour
 			poll = grid.WorldToCell(mousePos);
 			transform.position = grid.GetCellCenterLocal(poll);
 			if (Input.GetKeyDown("left") || Input.GetKeyDown("a") || Input.GetKeyDown("q")) {
-				transform.Rotate(new Vector3(0, 0, 45));
+				transform.Rotate(new Vector3(0, 0, angle));
             } else if (Input.GetKeyDown("right") || Input.GetKeyDown("e") || Input.GetKeyDown("d")) {
-				transform.Rotate(new Vector3(0, 0, -45));
+				transform.Rotate(new Vector3(0, 0, -angle));
 			}
 			if (Input.GetMouseButtonUp(0)) {
 				sprite.sortingLayerName = "Default";

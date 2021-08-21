@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1038455921584651447}
   - component: {fileID: 1038455921584651446}
+  - component: {fileID: 1046873992789232883}
   m_Layer: 0
   m_Name: ReverserSpawn
   m_TagString: Untagged
@@ -83,6 +84,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!58 &1046873992789232883
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1038455921584651440}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
 --- !u!1 &1038455922114935152
 GameObject:
   m_ObjectHideFlags: 0
@@ -97,7 +114,7 @@ GameObject:
   - component: {fileID: 1038455922114935156}
   - component: {fileID: 1743528872}
   - component: {fileID: 6499438432468746866}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Reverser
   m_TagString: Synchro
   m_Icon: {fileID: 0}

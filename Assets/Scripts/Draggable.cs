@@ -82,7 +82,7 @@ public class Draggable : MonoBehaviour
 		
 		gameObject.layer = 0;
 		foreach (Transform t in gameObject.transform) {
-			t.gameObject.layer = 0;
+			t.gameObject.layer = 2;
 		}
 		print("put down");
 		isHeld = false;

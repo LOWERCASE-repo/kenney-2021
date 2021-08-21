@@ -21,6 +21,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Levels/Gate.unity
     guid: 69a706bd8418d4f45954b962f8b5be05
   - enabled: 1
+    path: Assets/Scenes/Levels/Sacrifice.unity
+    guid: 046c17680f8313a47bb9aea0e50d1d25
+  - enabled: 1
     path: Assets/Scenes/Levels/Heroes.unity
     guid: 3130fd59af17fde4f88e463d53818bd3
   - enabled: 1
@@ -30,9 +33,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Levels/Misdirection.unity
     guid: e6240acc3154dcb4686266427356563e
   - enabled: 1
+    path: Assets/Scenes/Levels/Stalling.unity
+    guid: b80ab3b1b1979bd409bbcf56973fc970
+  - enabled: 1
     path: Assets/Scenes/Levels/False Hope.unity
     guid: 41ecbca97cab7c24c9c9231402fbae53
-  - enabled: 1
-    path: Assets/Scenes/Levels/Sacrifice.unity
-    guid: 046c17680f8313a47bb9aea0e50d1d25
   m_configObjects: {}

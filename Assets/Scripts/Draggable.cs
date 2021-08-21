@@ -71,6 +71,9 @@ public class Draggable : MonoBehaviour
 
     public void PickUp() {
 		gameObject.layer = 6;
+		foreach(Transform t in gameObject.transform) {
+			t.gameObject.layer = 6;
+        }
 		print("picked up");
 		isHeld = true;
 	}
@@ -78,7 +81,9 @@ public class Draggable : MonoBehaviour
 	void PutDown() {
 		
 		gameObject.layer = 0;
-
+		foreach (Transform t in gameObject.transform) {
+			t.gameObject.layer = 0;
+		}
 		print("put down");
 		isHeld = false;
 	}

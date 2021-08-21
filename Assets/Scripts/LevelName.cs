@@ -9,6 +9,6 @@ class LevelName : MonoBehaviour {
 	
 	void OnEnable() {
 		Scene scene = SceneManager.GetActiveScene();
-		text.text = $"{scene.buildIndex}. {scene.name}";
+		text.text = $"{scene.buildIndex - 1}. {scene.name}";
 	}
 }

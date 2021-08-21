@@ -27,6 +27,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Levels/Dog Pile.unity
     guid: fb2cd4e337a847e4f857979dec9d97fc
   - enabled: 1
+    path: Assets/Scenes/Levels/Sky Island.unity
+    guid: ee3e1ffcba9c537468da025d5f9b525d
+  - enabled: 1
     path: Assets/Scenes/Levels/Double Trouble.unity
     guid: a9da3e51865a6384cbb82d116f7d0c35
   - enabled: 1
@@ -60,7 +63,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Levels/Stalling.unity
     guid: b80ab3b1b1979bd409bbcf56973fc970
   - enabled: 1
-    path: Assets/Scenes/Levels/Ruins.unity
+    path: Assets/Scenes/Levels/Ruin.unity
     guid: 3b5071f5972a2f24992fad6e92c60d77
   - enabled: 1
     path: Assets/Scenes/Levels/Misdirection.unity

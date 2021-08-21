@@ -54,6 +54,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Levels/Aw Man.unity
     guid: 0471f99886b96c844a45bfe46f723ca7
   - enabled: 1
+    path: Assets/Scenes/Levels/Parkour.unity
+    guid: 7a98d5688f88fc8469191b8a09aed834
+  - enabled: 1
+    path: Assets/Scenes/Levels/Topsy-Turvy.unity
+    guid: 221d5bb03b30e16438b00c8758a32f01
+  - enabled: 1
     path: Assets/Scenes/Levels/False Hope.unity
     guid: 41ecbca97cab7c24c9c9231402fbae53
   m_configObjects: {}

@@ -34,7 +34,7 @@ public class LevelSelect : MonoBehaviour
 			string currentScene = SceneUtility.GetScenePathByBuildIndex(i);
 			print(currentScene);
 			currentScene = currentScene.Substring(currentScene.LastIndexOf("/") + 1, currentScene.LastIndexOf(".") - currentScene.LastIndexOf("/") - 1);
-			if (!currentScene.Equals("Level Select") && !currentScene.Equals("Main Menu")) {
+			if (!currentScene.Equals("Level Select") && !currentScene.Equals("Main Menu") && !currentScene.Equals("Thanks")) {
 				levelNames.Add(currentScene);
 			}
 		}

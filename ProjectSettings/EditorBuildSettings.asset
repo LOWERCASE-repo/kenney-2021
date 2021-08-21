@@ -62,4 +62,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Levels/Topsy-Turvy.unity
     guid: 221d5bb03b30e16438b00c8758a32f01
+  - enabled: 1
+    path: Assets/Scenes/Levels/One of a Kind.unity
+    guid: b8c8b2ee347926943a0f5ba4690a2a61
+  - enabled: 1
+    path: Assets/Scenes/Levels/Help a Friend.unity
+    guid: 5892c337c83aa4b46af8ff3f8caa1552
   m_configObjects: {}

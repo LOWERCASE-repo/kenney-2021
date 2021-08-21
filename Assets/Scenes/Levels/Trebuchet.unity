@@ -5402,6 +5402,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ReverserSpawn
       objectReference: {fileID: 0}
+    - target: {fileID: 1038455921584651440, guid: f93abe2c0c425724dbd0466c2af9cc06, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1038455921584651447, guid: f93abe2c0c425724dbd0466c2af9cc06, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -5605,17 +5609,17 @@ Tilemap:
   - m_RefCount: 0
     m_Data:
       e00: -1.084227e-19
-      e01: 4.4392147e+11
-      e02: 4.4389263e+11
-      e03: 4.4389263e+11
+      e01: 4.4393038e+11
+      e02: 4.4390154e+11
+      e03: 4.4390154e+11
       e10: 8.09e-43
       e11: 1.7e-43
       e12: 1.7e-43
       e13: 1.7e-43
       e20: 0.0006830599
-      e21: -1.5883835e+29
-      e22: 5.363804
-      e23: -1.5883835e+29
+      e21: -1.6558869e+29
+      e22: 5.413517
+      e23: -1.6558869e+29
       e30: 4.5904e-41
       e31: 8.1e-43
       e32: 8.09e-43
@@ -5681,7 +5685,7 @@ Tilemap:
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Origin: {x: -9, y: -103, z: 0}
-  m_Size: {x: 15, y: 109, z: 1}
+  m_Size: {x: 17, y: 109, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
   m_TileOrientation: 0
   m_TileOrientationMatrix:
@@ -5788,7 +5792,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8263984570131557227, guid: 3230d87d15ce5a5479f69dab67877fe6, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8263984570131557229, guid: 3230d87d15ce5a5479f69dab67877fe6, type: 3}
       propertyPath: m_RootOrder

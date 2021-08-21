@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Levels/Main.unity
     guid: 0d1fa24aa9b3ec041acc51b0e28ea468
+  - enabled: 1
+    path: Assets/Scenes/Levels/False Hope.unity
+    guid: 41ecbca97cab7c24c9c9231402fbae53
   m_configObjects: {}

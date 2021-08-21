@@ -4,19 +4,19 @@ class BallButton : Synchro {
 	
 	[SerializeField] Sprite buttonUp, buttonDown;
 	SpriteRenderer sprite;
-	[SerializeField] Platform platform;
+	[SerializeField] Platform[] platforms;
 	
 	[SerializeField] AudioSource source;
 	[SerializeField] AudioClip[] sounds;
 	
 	void OnEnable() {
 		sprite = GetComponent<SpriteRenderer>();
-		platform.PlatformOff();
+		SwapAll();
 	}
 	
 	void OnDisable() {
 		sprite.sprite = buttonUp;
-		platform.PlatformOff();
+		SwapAll();
 	}
 	
 	void OnTriggerEnter2D(Collider2D collider) {
@@ -24,7 +24,7 @@ class BallButton : Synchro {
 			// collider.GetComponent<Rigidbody2D>().velocity = transform.up * force;
 			// collider.GetComponent<Rigidbody2D>().AddForce(transform.up * force, ForceMode2D.Impulse);
 			sprite.sprite = buttonDown;
-			platform.PlatformOn();
+			SwapAll();
 			source.PlayOneShot(sounds[Random.Range(0, sounds.Length)]);
 		}
 	}
@@ -32,8 +32,14 @@ class BallButton : Synchro {
 	void OnTriggerExit2D(Collider2D collider) {
 		if (gameObject.layer != 6) {
 			sprite.sprite = buttonUp;
-			platform.PlatformOff();
+			SwapAll();
 			source.PlayOneShot(sounds[Random.Range(0, sounds.Length)]);
+		}
+	}
+
+	void SwapAll() {
+		foreach (Platform g in platforms) {
+			g.Swap();
 		}
 	}
 }

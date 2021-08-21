@@ -15,6 +15,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Levels/First Spin.unity
     guid: aae6a60deb95bee4e8fbd4f427c12c46
   - enabled: 1
+    path: Assets/Scenes/Levels/New Tools.unity
+    guid: de50ac733e1b5574582717d98ac53c20
+  - enabled: 1
     path: Assets/Scenes/Levels/Boing.unity
     guid: 11d1202a8c4ce1447ac500cf2d78ff61
   - enabled: 1

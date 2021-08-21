@@ -216,8 +216,10 @@ MonoBehaviour:
   image: {fileID: 3272179129926551503}
   button: {fileID: 6771990698650520376}
   text: {fileID: 1411808866047410493}
+  interactable: 0
   prefab: {fileID: 5858215599395437849, guid: 2f881afda9fdadc4d927bd4414ee914e, type: 3}
   tileNum: 0
+  tileNumHide: 0
 --- !u!114 &6771990698650520379
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -309,8 +311,8 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
-          m_TargetAssemblyTypeName: DraggableProducer, Assembly-CSharp
+        - m_Target: {fileID: 6771990698650520383}
+          m_TargetAssemblyTypeName: Generator, Assembly-CSharp
           m_MethodName: Generate
           m_Mode: 1
           m_Arguments:

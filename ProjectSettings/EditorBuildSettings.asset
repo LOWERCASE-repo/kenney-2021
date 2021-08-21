@@ -30,6 +30,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Levels/Railgun.unity
     guid: f7cdfb5ca219df34c96c233dd9f1d07b
   - enabled: 1
+    path: Assets/Scenes/Levels/Clipping.unity
+    guid: 819638842eb3bd0488e66d5585ee0ea4
+  - enabled: 1
     path: Assets/Scenes/Levels/Misdirection.unity
     guid: e6240acc3154dcb4686266427356563e
   - enabled: 1

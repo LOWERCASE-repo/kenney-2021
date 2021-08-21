@@ -8,4 +8,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Levels/Double Trouble.unity
     guid: a9da3e51865a6384cbb82d116f7d0c35
+  - enabled: 1
+    path: Assets/Scenes/Levels/Heroes.unity
+    guid: 3130fd59af17fde4f88e463d53818bd3
   m_configObjects: {}

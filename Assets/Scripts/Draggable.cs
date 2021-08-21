@@ -55,8 +55,10 @@ public class Draggable : MonoBehaviour
 	}
 	
 	private void OnMouseDown() {
-		sprite.sortingLayerName = "Placements";
-		PickUp();
+		if (!Synchronizer.Self.isPlay) {
+			sprite.sortingLayerName = "Placements";
+			PickUp();
+		}
 	}
 
     private void OnMouseOver() {

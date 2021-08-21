@@ -23,7 +23,7 @@ class Reverser : Synchro {
 	
 	void OnTriggerEnter2D() {
 		sprite.enabled = false;
-		// source.PlayOneShot(sounds[Random.Range(0, sounds.Length)]);
+		source.PlayOneShot(sounds[Random.Range(0, sounds.Length)]);
 		Synchronizer.Self.GetComponent<Rotator>().speed = newSpeed;
 	}
 	

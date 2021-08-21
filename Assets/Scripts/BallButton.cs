@@ -25,7 +25,7 @@ class BallButton : Synchro {
 			// collider.GetComponent<Rigidbody2D>().AddForce(transform.up * force, ForceMode2D.Impulse);
 			sprite.sprite = buttonDown;
 			platform.SetActive(true);
-			// source.PlayOneShot(sounds[Random.Range(0, sounds.Length)]);
+			source.PlayOneShot(sounds[Random.Range(0, sounds.Length)]);
 		}
 	}
 	
@@ -33,6 +33,7 @@ class BallButton : Synchro {
 		if (gameObject.layer != 6) {
 			sprite.sprite = buttonUp;
 			platform.SetActive(false);
+			source.PlayOneShot(sounds[Random.Range(0, sounds.Length)]);
 		}
 	}
 }

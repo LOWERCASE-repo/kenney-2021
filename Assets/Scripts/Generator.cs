@@ -39,7 +39,7 @@ class Generator : MonoBehaviour
 	}
 	private void OnEnable() {
 		Sprite s;
-		if (prefab.transform.childCount > 0) {
+		if (prefab.transform.childCount > 0 && !prefab.name.Contains("Spikes")) {
 			s = prefab.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite;
 		} else {
 			s = prefab.GetComponent<SpriteRenderer>().sprite;

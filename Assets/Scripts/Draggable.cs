@@ -73,7 +73,6 @@ class Draggable : MonoBehaviour {
 			foreach(Transform t in gameObject.transform) {
 				t.gameObject.layer = 6;
 			}
-			print("picked up");
 			isHeld = true;
 		}
 		
@@ -83,7 +82,6 @@ class Draggable : MonoBehaviour {
 			foreach (Transform t in gameObject.transform) {
 				t.gameObject.layer = 2;
 			}
-			print("put down");
 			isHeld = false;
 		}
 		

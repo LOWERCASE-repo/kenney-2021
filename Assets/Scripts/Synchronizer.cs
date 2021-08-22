@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine.Tilemaps;
 
 class Synchronizer : MonoBehaviour {
 	
@@ -9,6 +10,7 @@ class Synchronizer : MonoBehaviour {
 	[SerializeField] internal Transform playerPieces;
 	[SerializeField] Transform Buttons;
 	[SerializeField] Animator fader;
+	[SerializeField] TilemapRenderer placementsRenderer;
 	List<Goal> goals = new List<Goal>();
 	
 	void Awake() => Self = this;
@@ -26,6 +28,7 @@ class Synchronizer : MonoBehaviour {
 		foreach (GameObject gameObject in synchros) {
 			gameObject.GetComponent<Synchro>().enabled = true;
 		}
+		placementsRenderer.enabled = false;
 	}
 	
 	void OnDisable() {
@@ -35,6 +38,7 @@ class Synchronizer : MonoBehaviour {
 			gameObject.GetComponent<Synchro>().enabled = false;
 		}
 		goals.Clear();
+		placementsRenderer.enabled = true;
 	}
 	
 	internal void RegisterGoal(Goal goal) {

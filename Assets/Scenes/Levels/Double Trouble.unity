@@ -2147,9 +2147,13 @@ PrefabInstance:
       propertyPath: speed
       value: -20
       objectReference: {fileID: 0}
+    - target: {fileID: 3653511190845748456, guid: 8e037925583fb024cab59dc3a0b02257, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -32.5
+      objectReference: {fileID: 0}
     - target: {fileID: 3653511191342087210, guid: 8e037925583fb024cab59dc3a0b02257, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3653511191342087213, guid: 8e037925583fb024cab59dc3a0b02257, type: 3}
       propertyPath: m_Tiles.Array.size
@@ -3137,7 +3141,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3653511192060994041, guid: 8e037925583fb024cab59dc3a0b02257, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -100.00003
+      value: -100.00006
       objectReference: {fileID: 0}
     - target: {fileID: 7221473925345834717, guid: 8e037925583fb024cab59dc3a0b02257, type: 3}
       propertyPath: m_RootOrder

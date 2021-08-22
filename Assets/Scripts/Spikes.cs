@@ -13,7 +13,7 @@ class Spikes : MonoBehaviour {
 		pops[index].transform.position = collider.transform.position;
 		pops[index].SetActive(true);
 		index = (index + 1) % pops.Length;
-		collider.transform.position = Vector3.down * 868031011794f;
+		collider.transform.position = Vector3.up * 868031011794f;
 		source.PlayOneShot(sounds[Random.Range(0, sounds.Length)]);
 	}
 }

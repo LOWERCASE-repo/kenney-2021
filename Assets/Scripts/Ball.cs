@@ -31,11 +31,11 @@ class Ball : Synchro {
 	}
 
 	internal void EebyDeebyify() {
-		transform.position += Vector3.down * 868031011794f;
+		transform.position += Vector3.up * 868031011794f;
 	}
 	
 	internal IEnumerator EebyCoru() {
 		yield return new WaitForSeconds(1f / 3f);
-		transform.position += Vector3.down * 868031011794f;
+		transform.position += Vector3.up * 868031011794f;
 	}
 }

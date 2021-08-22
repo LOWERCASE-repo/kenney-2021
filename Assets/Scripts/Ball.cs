@@ -25,8 +25,9 @@ class Ball : Synchro {
 		animator.SetTrigger("Reset");
 	}
 	
-	void OnCollisionEnter2D() {
-		if (body.velocity.sqrMagnitude > 4f) source.PlayOneShot(bounceSounds[Random.Range(0, bounceSounds.Length)]);
+	void OnCollisionEnter2D(Collision2D collision) {
+		if (collision.relativeVelocity.magnitude < 4f) return;
+		source.PlayOneShot(bounceSounds[Random.Range(0, bounceSounds.Length)]);
 	}
 	
 	internal void EebyDeebyify() {

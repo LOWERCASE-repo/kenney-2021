@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 class Goal : Synchro {
 	
@@ -21,8 +22,8 @@ class Goal : Synchro {
 	void OnTriggerEnter2D(Collider2D collider) {
 		sprite.sprite = filled;
 		collider.GetComponent<Animator>().SetTrigger("Goal");
+		StartCoroutine(collider.GetComponent<Ball>().EebyCoru());
 		circle.enabled = false;
-		collider.GetComponent<Ball>().EebyDeebyify();
 		Synchronizer.Self.CloseGoal(this);
 		source.PlayOneShot(sounds[Random.Range(0, sounds.Length)]);
 	}

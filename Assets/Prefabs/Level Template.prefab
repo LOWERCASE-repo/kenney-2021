@@ -497,6 +497,7 @@ GameObject:
   - component: {fileID: 3653511190728637310}
   - component: {fileID: 3653511190728637311}
   - component: {fileID: 3653511190728637308}
+  - component: {fileID: 2737861497295349239}
   m_Layer: 0
   m_Name: Level
   m_TagString: Synchro
@@ -747,6 +748,114 @@ MonoBehaviour:
   fast: {fileID: 21300000, guid: 138f97b9e7fed5f4ab8696c8424c8f94, type: 3}
   slow: {fileID: 21300000, guid: b57c2042df595294ca7ba8306cfdcea0, type: 3}
   button: {fileID: 3653511190229050231}
+  source: {fileID: 2737861497295349239}
+  fastSound:
+  - {fileID: 8300000, guid: 8863cc3358f582c4ebc74eff1b1beeaa, type: 3}
+  - {fileID: 8300000, guid: 94efd53696b3e224b89e69e9dba4eaff, type: 3}
+  - {fileID: 8300000, guid: 7b4c4d6e2cbdece40a7be81bef6be36f, type: 3}
+  - {fileID: 8300000, guid: fdbc924d0a1602f4abc82b26bd0b997a, type: 3}
+  - {fileID: 8300000, guid: edaa0976bf615984fbf635b1a185aea7, type: 3}
+  - {fileID: 8300000, guid: 6dc4067e5b7841140a71e01e51acad23, type: 3}
+  - {fileID: 8300000, guid: e0395c92f48a18546a64273affdef1fc, type: 3}
+  slowSound:
+  - {fileID: 8300000, guid: 28458c20232892c4b90e2384a518408f, type: 3}
+  - {fileID: 8300000, guid: 0d0e6a15c282d574abbfc202e70abb28, type: 3}
+--- !u!82 &2737861497295349239
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3653511190728637309}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 0.7
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &3653511190845748457
 GameObject:
   m_ObjectHideFlags: 0
@@ -1369,6 +1478,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 5743427275310568870}
+        m_TargetAssemblyTypeName: Sounder, Assembly-CSharp
+        m_MethodName: Activate
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &3653511191699680664
 GameObject:
   m_ObjectHideFlags: 0
@@ -1617,6 +1738,7 @@ GameObject:
   - component: {fileID: 3653511191999658481}
   - component: {fileID: 3653511191999658483}
   - component: {fileID: 3653511191999658480}
+  - component: {fileID: 5743427275310568870}
   m_Layer: 5
   m_Name: Victory
   m_TagString: Untagged
@@ -1823,6 +1945,30 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &5743427275310568870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3653511191999658494}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d47254c2f50fecb43bbc48d7fe1193fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  source: {fileID: 3653511191999658480}
+  clips:
+  - {fileID: 8300000, guid: cb43873bc22cf9e47a49b7d9109f315f, type: 3}
+  - {fileID: 8300000, guid: dcd8488669d3cd84f826c83ba5a52eb2, type: 3}
+  - {fileID: 8300000, guid: 7dd20446c12620a4e9526ab44673f5c8, type: 3}
+  - {fileID: 8300000, guid: 0b00800366eb46442a9675302c146106, type: 3}
+  - {fileID: 8300000, guid: 4d08bd8efd47d9844ab13f7340218d5e, type: 3}
+  - {fileID: 8300000, guid: 271daab35551768478e12e7c386e386f, type: 3}
+  - {fileID: 8300000, guid: 9fd402c5520b51d4e82491fda10d3e92, type: 3}
+  - {fileID: 8300000, guid: 7b5037d65e69b604c81abbc784560c89, type: 3}
+  - {fileID: 8300000, guid: 2f0beed42af6b3f44870525a82607ce2, type: 3}
+  - {fileID: 8300000, guid: f7dc1e2c9cb2c9b45a61e658a24895e6, type: 3}
 --- !u!1 &3653511192034101287
 GameObject:
   m_ObjectHideFlags: 0

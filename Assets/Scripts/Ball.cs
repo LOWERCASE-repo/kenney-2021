@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 class Ball : Synchro {
 	
@@ -25,10 +26,15 @@ class Ball : Synchro {
 	}
 	
 	void OnCollisionEnter2D() {
-		if (body.velocity.sqrMagnitude > 6f) source.PlayOneShot(bounceSounds[Random.Range(0, bounceSounds.Length)]);
+		if (body.velocity.sqrMagnitude > 4f) source.PlayOneShot(bounceSounds[Random.Range(0, bounceSounds.Length)]);
 	}
 	
 	internal void EebyDeebyify() {
+		transform.position += Vector3.down * 868031011794f;
+	}
+	
+	internal IEnumerator EebyCoru() {
+		yield return new WaitForSeconds(1f / 3f);
 		transform.position += Vector3.down * 868031011794f;
 	}
 }

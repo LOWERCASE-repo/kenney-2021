@@ -28,7 +28,7 @@ class Ball : Synchro {
 		if (body.velocity.sqrMagnitude > 6f) source.PlayOneShot(bounceSounds[Random.Range(0, bounceSounds.Length)]);
 	}
 	
-	void EebyDeebyify() {
+	internal void EebyDeebyify() {
 		transform.position += Vector3.down * 868031011794f;
 	}
 }

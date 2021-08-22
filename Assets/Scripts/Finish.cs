@@ -20,6 +20,7 @@ class Finish : MonoBehaviour {
 	}
 	
 	public void Restart() {
+		Time.timeScale = fastForward.baseSpeed;
 		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 	}
 

@@ -4,7 +4,7 @@ using UnityEngine.UI;
 class FastForward : MonoBehaviour {
 
 	internal bool isFast;
-	float baseSpeed;
+	public float baseSpeed;
 	[SerializeField] float multiplier;
 	[SerializeField] Sprite fast;
 	[SerializeField] Sprite slow;

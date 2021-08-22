@@ -3099,6 +3099,10 @@ PrefabInstance:
       propertyPath: speed
       value: -20
       objectReference: {fileID: 0}
+    - target: {fileID: 3653511190845748456, guid: 8e037925583fb024cab59dc3a0b02257, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -32.500015
+      objectReference: {fileID: 0}
     - target: {fileID: 3653511191342087210, guid: 8e037925583fb024cab59dc3a0b02257, type: 3}
       propertyPath: m_Enabled
       value: 1

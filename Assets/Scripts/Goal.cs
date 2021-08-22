@@ -24,8 +24,14 @@ class Goal : Synchro {
 		sprite.sprite = filled;
 		collider.GetComponent<Animator>().SetTrigger("Goal");
 		StartCoroutine(collider.GetComponent<Ball>().EebyCoru());
+		StartCoroutine(ExtraEeby());
 		circle.enabled = false;
 		Synchronizer.Self.CloseGoal(this);
 		source.PlayOneShot(sounds[Random.Range(0, sounds.Length)]);
+	}
+	
+	IEnumerator ExtraEeby(Ball ball) {
+		yield return new WaitForSeconds(1f / 3f);
+		ball.EebyDeebyify();
 	}
 }

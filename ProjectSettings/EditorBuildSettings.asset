@@ -36,14 +36,11 @@ EditorBuildSettings:
     path: Assets/Scenes/Levels/Sacrifice.unity
     guid: 046c17680f8313a47bb9aea0e50d1d25
   - enabled: 1
-    path: Assets/Scenes/Levels/Suspicious.unity
-    guid: c69a4f2bf03427147967d7208e502b76
-  - enabled: 1
     path: Assets/Scenes/Levels/Full House.unity
     guid: b703cc08f702c574f9f794c3020469f9
   - enabled: 1
-    path: Assets/Scenes/Levels/Heroes.unity
-    guid: 3130fd59af17fde4f88e463d53818bd3
+    path: Assets/Scenes/Levels/Suspicious.unity
+    guid: c69a4f2bf03427147967d7208e502b76
   - enabled: 1
     path: Assets/Scenes/Levels/Bouncy Castle.unity
     guid: b2a366daeefd55a45972cee4c7420739

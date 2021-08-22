@@ -16,12 +16,14 @@ class Synchronizer : MonoBehaviour {
 	// TODO clear on reset
 	internal HashSet<Vector3Int> currentPieces = new HashSet<Vector3Int>();
 	
-	void OnEnable() {
+	void Start() {
 		currentPieces.Clear();
+	}
+	
+	void OnEnable() {
 		isPlay = true;
 		GameObject[] synchros = GameObject.FindGameObjectsWithTag("Synchro");
 		foreach (GameObject gameObject in synchros) {
-			gameObject.
 			gameObject.GetComponent<Synchro>().enabled = true;
 		}
 	}

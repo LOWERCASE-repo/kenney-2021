@@ -756,7 +756,6 @@ MonoBehaviour:
   - {fileID: 8300000, guid: fdbc924d0a1602f4abc82b26bd0b997a, type: 3}
   - {fileID: 8300000, guid: edaa0976bf615984fbf635b1a185aea7, type: 3}
   - {fileID: 8300000, guid: 6dc4067e5b7841140a71e01e51acad23, type: 3}
-  - {fileID: 8300000, guid: e0395c92f48a18546a64273affdef1fc, type: 3}
   slowSound:
   - {fileID: 8300000, guid: 28458c20232892c4b90e2384a518408f, type: 3}
   - {fileID: 8300000, guid: 0d0e6a15c282d574abbfc202e70abb28, type: 3}

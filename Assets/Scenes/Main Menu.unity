@@ -1711,7 +1711,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 20}
   m_SizeDelta: {x: 200, y: 80}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &2003341453
@@ -3002,10 +3002,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 656c0c69f2fcb094c80153679689ae5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  baseSpeed: 0
   multiplier: 4
   fast: {fileID: 21300000, guid: 138f97b9e7fed5f4ab8696c8424c8f94, type: 3}
   slow: {fileID: 21300000, guid: b57c2042df595294ca7ba8306cfdcea0, type: 3}
   button: {fileID: 0}
+  source: {fileID: 0}
+  fastSound: []
+  slowSound: []
 --- !u!114 &5420423357796156126
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3023,6 +3027,7 @@ MonoBehaviour:
   playerPieces: {fileID: 0}
   Buttons: {fileID: 0}
   fader: {fileID: 5420423356793831504}
+  placementsRenderer: {fileID: 0}
 --- !u!114 &5420423357796156127
 MonoBehaviour:
   m_ObjectHideFlags: 0

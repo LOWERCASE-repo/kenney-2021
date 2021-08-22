@@ -20,7 +20,7 @@ class Key : Synchro {
 	}
 	
 	void OnTriggerEnter2D() {
-		if (!sprite.enabled) return;
+		if (!sprite.enabled || !Synchronizer.Self.isPlay) return;
 		door.SetActive(false);
 		sprite.enabled = false;
 		source.PlayOneShot(sounds[Random.Range(0, sounds.Length)]);

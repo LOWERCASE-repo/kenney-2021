@@ -38,13 +38,7 @@ class Generator : MonoBehaviour
 		parent = Synchronizer.Self.playerPieces;
 	}
 	private void OnEnable() {
-		Sprite s;
-		if (prefab.transform.childCount > 0 && !prefab.name.Contains("Spikes")) {
-			s = prefab.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite;
-		} else {
-			s = prefab.GetComponent<SpriteRenderer>().sprite;
-		}
-		image.sprite = s;
+		image.sprite = prefab.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite;
 		tileNumHide = tileNum;
 		if (tileNumHide > 0) {
 			button.interactable = true;

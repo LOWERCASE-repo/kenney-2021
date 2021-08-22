@@ -24,12 +24,12 @@ class Ball : Synchro {
 		transform.localRotation = Quaternion.identity;
 		animator.SetTrigger("Reset");
 	}
-	
+
 	void OnCollisionEnter2D(Collision2D collision) {
-		if (collision.relativeVelocity.magnitude < 4f) return;
+		if (collision.relativeVelocity.magnitude < 4f && Synchronizer.Self.isPlay) return;
 		source.PlayOneShot(bounceSounds[Random.Range(0, bounceSounds.Length)]);
 	}
-	
+
 	internal void EebyDeebyify() {
 		transform.position += Vector3.down * 868031011794f;
 	}

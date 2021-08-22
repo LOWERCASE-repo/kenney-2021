@@ -22,6 +22,7 @@ class Goal : Synchro {
 		sprite.sprite = filled;
 		collider.GetComponent<Animator>().SetTrigger("Goal");
 		circle.enabled = false;
+		collider.GetComponent<Ball>().EebyDeebyify();
 		Synchronizer.Self.CloseGoal(this);
 		source.PlayOneShot(sounds[Random.Range(0, sounds.Length)]);
 	}

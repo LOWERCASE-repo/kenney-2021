@@ -23,8 +23,9 @@ class Goal : Synchro {
 		if (!Synchronizer.Self.isPlay) return;
 		sprite.sprite = filled;
 		collider.GetComponent<Animator>().SetTrigger("Goal");
-		StartCoroutine(collider.GetComponent<Ball>().EebyCoru());
-		StartCoroutine(ExtraEeby());
+		Ball ball = collider.GetComponent<Ball>();
+		StartCoroutine(ball.EebyCoru());
+		StartCoroutine(ExtraEeby(ball));
 		circle.enabled = false;
 		Synchronizer.Self.CloseGoal(this);
 		source.PlayOneShot(sounds[Random.Range(0, sounds.Length)]);

@@ -11,12 +11,12 @@ class BallButton : Synchro {
 	
 	void OnEnable() {
 		sprite = GetComponent<SpriteRenderer>();
-		SwapAll();
 	}
 	
 	void OnDisable() {
-		sprite.sprite = buttonUp;
-		SwapAll();
+		if (sprite.sprite.Equals(buttonDown)) {
+			SwapAll();
+        }
 	}
 	
 	void OnTriggerEnter2D(Collider2D collider) {

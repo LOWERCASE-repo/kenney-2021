@@ -8,7 +8,8 @@ public class Platform : MonoBehaviour
     [SerializeField] Sprite platformOff;
     [SerializeField] bool state;
     // Start is called before the first frame update
-    void Start() {
+    private void Start() {
+        state = !state;
         Swap();
     }
     public void PlatformOn () {

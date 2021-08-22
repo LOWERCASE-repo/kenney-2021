@@ -17,9 +17,10 @@ class Draggable : MonoBehaviour {
 	
 	private void Start() {
 		cam = Camera.main;
-		sprite = GetComponent<SpriteRenderer>();
+		sprite = transform.GetChild(0).GetComponent<SpriteRenderer>();
 		grid = Synchronizer.Self.grid;
 		placements = grid.transform.GetChild(0).GetComponent<Tilemap>();
+		sprite.sortingLayerName = "Placements";
 		angle = gameObject.tag.Equals("Spring") ? 45f : 90f;
 	}
 	
@@ -65,20 +66,21 @@ class Draggable : MonoBehaviour {
 		}
 		
 		private void OnMouseExit() {
+			if (isHeld) return;
 			sprite.color = new Color(sprite.color.r, sprite.color.g, sprite.color.b, 1f);
 		}
 		
 		public void PickUp() {
-			gameObject.layer = 6;
+			gameObject.layer = 3;
 			foreach(Transform t in gameObject.transform) {
-				t.gameObject.layer = 6;
+				t.gameObject.layer = 2;
 			}
 			isHeld = true;
 		}
 		
 		void PutDown() {
 			
-			gameObject.layer = 0;
+			gameObject.layer = 6;
 			foreach (Transform t in gameObject.transform) {
 				t.gameObject.layer = 2;
 			}

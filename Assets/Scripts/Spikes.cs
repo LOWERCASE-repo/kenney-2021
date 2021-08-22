@@ -9,6 +9,7 @@ class Spikes : MonoBehaviour {
 	[SerializeField] AudioClip[] sounds;
 	
 	void OnTriggerEnter2D(Collider2D collider) {
+		if (!Synchronizer.Self.isPlay) return;
 		pops[index].transform.position = collider.transform.position;
 		pops[index].SetActive(true);
 		index = (index + 1) % pops.Length;

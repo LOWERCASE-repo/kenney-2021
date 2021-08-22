@@ -19,6 +19,7 @@ class Goal : Synchro {
 	}
 	
 	void OnTriggerEnter2D(Collider2D collider) {
+		if (!Synchronizer.Self.isPlay) return;
 		sprite.sprite = filled;
 		collider.GetComponent<Animator>().SetTrigger("Goal");
 		circle.enabled = false;

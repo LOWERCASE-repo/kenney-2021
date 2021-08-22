@@ -20,7 +20,7 @@ class BallButton : Synchro {
 	}
 	
 	void OnTriggerEnter2D(Collider2D collider) {
-		if (gameObject.layer != 6) {
+		if (Synchronizer.Self.isPlay) {
 			// collider.GetComponent<Rigidbody2D>().velocity = transform.up * force;
 			// collider.GetComponent<Rigidbody2D>().AddForce(transform.up * force, ForceMode2D.Impulse);
 			sprite.sprite = buttonDown;
@@ -30,7 +30,7 @@ class BallButton : Synchro {
 	}
 	
 	void OnTriggerExit2D(Collider2D collider) {
-		if (gameObject.layer != 6) {
+		if (Synchronizer.Self.isPlay) {
 			sprite.sprite = buttonUp;
 			SwapAll();
 			source.PlayOneShot(sounds[Random.Range(0, sounds.Length)]);
